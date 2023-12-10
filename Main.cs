@@ -1,11 +1,14 @@
 using Godot;
 
-public partial class Main : Node2D {
-	private void OnQuitPressed() {
+public partial class Main : Node2D
+{
+	private void OnQuitPressed()
+	{
 		GetTree().Quit();
 	}
 
-	private void OnPlayPressed() {
+	private void OnPlayPressed()
+	{
 		GetTree().ChangeSceneToFile("res://world.tscn");
 	}
 
