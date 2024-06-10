@@ -10,15 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Godot-tutorial"
-run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/name="godot-tutorial"
+run/main_scene="res://scenes/game.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="Godot-tutorial"
+project/assembly_name="godot-tutorial"
 
 [rendering]
 
-renderer/rendering_method="mobile"
+textures/canvas_textures/default_texture_filter=0
