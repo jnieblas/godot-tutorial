@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://di18tadxaiaxe"]
+[gd_scene load_steps=17 format=3 uid="uid://di18tadxaiaxe"]
 
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_4y1dn"]
 [ext_resource type="PackedScene" uid="uid://dgnxkp3npk0vo" path="res://scenes/player.tscn" id="1_gphsv"]
 [ext_resource type="Texture2D" uid="uid://kmu21gtqc6tl" path="res://assets/sprites/world_tileset.png" id="2_ysy2p"]
 [ext_resource type="PackedScene" uid="uid://c1j32mqbe65rl" path="res://scenes/platform.tscn" id="3_2i7sq"]
@@ -580,6 +581,20 @@ sources/1 = SubResource("TileSetAtlasSource_j7t1q")
 [node name="Game" type="Node2D"]
 position = Vector2(-122, -3)
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_4y1dn")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 253.0
+offset_top = -22.0
+offset_right = 342.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("7_7o84r")
+theme_override_font_sizes/font_size = 8
+text = "You collected x coins."
+autowrap_mode = 2
+
 [node name="Player" parent="." instance=ExtResource("1_gphsv")]
 position = Vector2(-7, 79)
 
@@ -652,7 +667,7 @@ position = Vector2(681, 36)
 [node name="Slime2" parent="." instance=ExtResource("6_x0w35")]
 position = Vector2(121, -11)
 
-[node name="Label" type="Label" parent="."]
+[node name="HowToJump" type="Label" parent="."]
 offset_left = -122.0
 offset_top = 78.0
 offset_right = -31.0
@@ -661,7 +676,7 @@ theme_override_fonts/font = ExtResource("7_7o84r")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump."
 
-[node name="Label2" type="Label" parent="."]
+[node name="FallingWarning" type="Label" parent="."]
 offset_left = 374.0
 offset_top = 79.0
 offset_right = 475.0
